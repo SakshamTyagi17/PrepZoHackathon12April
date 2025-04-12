@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | CareerNav</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      background-color: #f0f8ff;
+    }
+
+    .left {
+      flex: 1;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      position: relative;
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: slideLeft 1.2s ease-out;
+    }
+
+    .left h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .left p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .left svg {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      width: 300px;
+      opacity: 0.4;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .right {
+      flex: 1;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: slideRight 1.2s ease-out;
+    }
+
+    .login-box {
+      width: 100%;
+      max-width: 400px;
+      padding: 40px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      background: #fefefe;
+      animation: fadeInUp 1s ease;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0d47a1;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .login-box input:focus {
+      outline: none;
+      border-color: #2575fc;
+      box-shadow: 0 0 10px rgba(37, 117, 252, 0.2);
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: #2575fc;
+      color: white;
+      font-size: 1rem;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-box button:hover {
+      background: #1b63d6;
+    }
+
+    .login-box .extra {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .login-box .extra a {
+      color: #2575fc;
+      text-decoration: none;
+    }
+
+    @keyframes slideLeft {
+      from { transform: translateX(-100px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes slideRight {
+      from { transform: translateX(100px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .left {
+        flex: 1;
+        height: 40%;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .right {
+        flex: 1;
+        height: 60%;
+        padding: 40px 20px;
+      }
+
+      .left svg {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <h1>Welcome Back!</h1>
+    <p>Join the journey to discover your dream career.</p>
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#ffffff" d="M50,-65C63,-54,69.8,-35.1,74.1,-15.9C78.4,3.3,80.1,22.7,70.9,36.2C61.7,49.8,41.6,57.6,23.1,63.7C4.6,69.8,-12.3,74.1,-30.7,69.2C-49.1,64.3,-68.9,50.3,-72.6,33.2C-76.3,16.1,-63.8,-4.1,-52.2,-21.3C-40.6,-38.6,-29.8,-52.8,-14.2,-63.4C1.4,-74,28.6,-81.1,50,-65Z" transform="translate(100 100)" />
+    </svg>
+  </div>
+
+  <div class="right">
+    <div class="login-box">
+      <h2>Login to PrepZo</h2>
+      <form>
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+        <div class="extra">
+          <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

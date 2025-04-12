@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Features | CareerNav</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #dfe9f3, #ffffff);
+      color: #333;
+      padding: 0;
+    }
+
+    header {
+      background: #2575fc;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .features-section {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    .feature-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+      padding: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 100px;
+      height: 100px;
+      background: #2575fc;
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: #2575fc;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #0d47a1;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .features-section {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Powerful Features</h1>
+    <p>Explore how CareerNav helps you plan, learn, and grow with purpose.</p>
+  </header>
+
+  <section class="features-section">
+    <div class="feature-card">
+      <div class="feature-icon">🧭</div>
+      <h3>Personalized Career Paths</h3>
+      <p>Get AI-powered recommendations based on your interests, skills, and goals to explore the most suitable career paths for you.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">📚</div>
+      <h3>Smart Study Materials</h3>
+      <p>Access curated study materials, past year papers, and important topic summaries to help you prepare better and faster.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">📝</div>
+      <h3>Interactive Assessments</h3>
+      <p>Take quizzes and skill assessments that track your progress and guide you to improve your weaknesses.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">🤖</div>
+      <h3>AI Chat Support</h3>
+      <p>Need guidance or feeling stuck? Chat with our friendly AI bot to get help, motivation, or learning suggestions instantly.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">🔔</div>
+      <h3>Progress Nudges</h3>
+      <p>Receive smart reminders and progress nudges via SMS or email to stay on track with your learning goals.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">🎓</div>
+      <h3>Video Courses & Tutorials</h3>
+      <p>Explore handpicked tutorials and video courses from platforms like YouTube and Coursera to enhance your skills.</p>
+    </div>
+  </section>
+
+</body>
+</html>

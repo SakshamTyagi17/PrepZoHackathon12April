@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerNav - AI Career Navigation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #f7f5f2;
+      padding: 20px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      /* background: linear-gradient(to right, #4a00e0, #8e2de2); */
+      color: white;
+      height: 300px;
+      margin-bottom: 30px;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-bottom: 30px;
+      color: black;
+    }
+
+    .hero button {
+      background-color: #fff;
+      color: #4a00e0;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #e6e6e6;
+    }
+
+    .features {
+    display: grid;
+      /* grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 30px;*/
+      padding: 60px 40px; 
+      /* width: 80vw */
+      /* display: flex */
+      /* justify-content: center; */
+      /* align-items: center; */
+      /* justify-items: center; */
+      grid-template-areas: " box1 box2 box3"
+                           " boxa boxa boxc"
+                           " boxa boxa boxc";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr ;
+        row-gap: 90px;
+        column-gap: 100px;
+    }
+
+    .feature-card {
+      background-color: rgb(245, 234, 118);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      grid-area: box1;
+      padding-top: 60px;
+      padding-bottom: 80px;
+      border: 1px solid black;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      position: inherit;
+   
+      
+    }
+
+    .feature-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    footer {
+      background-color: #1a1a2e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+    .pngimage{
+        float: left;
+        /* background: #4a00e0 */
+    }
+    .diff{
+        font-family:  "Poppins", sans-serif;
+        font-weight: 400; ;
+    }
+    .boxinfo{
+        border: 2px solid white;
+        text-align: center;
+        border-radius: 20px ;
+        background-color: black;
+        color: white;
+    }
+    .asses{
+        border: 2px solid black;
+        text-align: center;
+        border-radius: 20px;
+        background-color: rgb(245, 234, 118);
+        margin-bottom: 10px;
+    }
+    .feature-card2{
+        padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      background-color: rgb(243, 165, 230); 
+      grid-area: box2;
+      padding-top: 60px;
+      padding-bottom: 80px;
+      border: 1px solid black;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      position: inherit;
+   
+    }
+    .feature-card3{
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      background-color: rgb(163, 204, 245);
+      grid-area: box3;
+      padding-top: 60px;
+      padding-bottom: 80px;
+      border: 1px solid black;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      position: inherit;
+    }
+    .stdmat{
+        border: 2px solid black;
+        text-align: center;
+        border-radius: 20px;
+        background-color: rgb(243, 165, 230);
+        margin-bottom: 10px;
+    }
+    .feature-card4{
+        padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      background-color: rgb(163, 204, 245);
+      height: 540px;
+      grid-area: boxc;
+      padding-top: 60px;
+      padding-bottom: 80px;
+      background-color: black;
+      color: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+     
+     
+    }
+    .chatsup{
+        border: 2px solid white;
+        text-align: center;
+        border-radius: 20px;
+        background-color:  rgb(245, 234, 118);
+        color: black;
+        margin-bottom: 10px;
+    }
+    .chat-container{
+
+     grid-area: boxa;
+    height: 540px;
+     /* width: 100%; */
+     /* max-width: 500px; */
+     /* height: 500px; */
+     border-radius: 15px;
+     display: flex;
+     flex-direction: column;
+     background-color: #ffffff;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+     font-family: 'Segoe UI', sans-serif;
+     border: 1px solid black;
+}
+
+.chat-header {
+    grid-area: boxa;
+  background-color: #c6c6d2;
+  color: white;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.chat-messages {
+    grid-area: boxa;
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #eef1f8;
+}
+
+.message {
+    grid-area: boxa;
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 15px;
+  font-size: 15px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.message.bot {
+    grid-area: boxa;
+  background-color: #ffffff;
+  align-self: flex-start;
+  border: 1px solid #cbd5e1;
+}
+
+.message.user {
+    grid-area: boxa;
+  background-color: #8d8c9c;
+  color: white;
+  align-self: flex-end;
+}
+
+.chat-input-area {
+    grid-area: boxa;
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  background-color: white;
+}
+
+.chat-input-area input {
+    grid-area: boxa;
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  font-size: 15px;
+  transition: border-color 0.2s;
+}
+
+.chat-input-area input:focus {
+    grid-area: boxa;
+  border-color: #c0bfcc;
+}
+
+.chat-input-area button {
+    grid-area: boxa;
+  margin-left: 10px;
+  padding: 10px 18px;
+  background-color: #8d8c9c;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input-area button:hover {
+    grid-area: boxa;
+  background-color: #3730a3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.feature-card5{
+    grid-area: boxa;
+}
+
+
+      
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <h2 style="color: black;">Prep<b class="diff">Zo</b></h2>
+    <nav>
+      <a style="color: black; font-weight: 300;" href="featurespage.html"><button style="padding: 5px; border-radius: 80px; border-color: white;;">Features</button></a>
+      <a style="color: black;" href="#about"><button style="padding: 5px; border-radius: 80px; border-color: white;">About</button></a>
+      <a style="color: black;" href="#contact"><button style="padding: 5px;
+      border-radius: 80px; border-color: white;">Contact</button></a>
+    </nav>
+  </header>
+
+  <img class="pngimage" src="video-calling.png" alt="" width="300px" height="300px">
+
+  <section class="hero">
+    <h2>Navigate Your Career with AI</h2>
+    <p>PrepZo is your intelligent companion to discover interests, explore paths, learn skills, and track your journey to success.</p>
+    <a href="loginpage.html"><button class="getstarted" style="background-color: #f9f9f9; border-radius: 80px;border: 2px solid rgb(219, 214, 214); color: black;">Get Started</button></a>
+  </section>
+
+  <section class="features" id="features">
+    <div class="feature-card">
+      <h3 class="boxinfo">Progress Tracker</h3>
+      <p class="ptracker">Understand your strengths, interests, and goals using OpenAI and advanced analytics.</p>
+      <a href="ProgressTracker.html"><button class="contbutton" style="padding: 10px; background-color: rgb(245, 123, 52); border-radius: 5px; color: white; border: none; margin-top: 50px;">Continue</button></a>
+    </div>
+    <div class="feature-card2">
+      <h3 class="asses">Assesments</h3>
+      <p>Transform progress tracking into a powerful tool for growth with smart, reliable assessments tailored to your needs.</p>
+      <a href="assessment.html"><button class="contbutton" style="padding: 10px; background-color: rgb(245, 123, 52); border-radius: 5px; color: white; border: none; margin-top: 50px;">Continue</button></a>
+      </div>
+    <div class="feature-card3">
+      <h3 class="stdmat">Study Material</h3>
+      <p>Your gateway to organized, high-quality content—built to help you learn smarter, not harder.</p>
+      <a href="StudyMaterial.html"><button class="contbutton" style="padding: 10px; background-color: rgb(245, 123, 52); border-radius: 5px; color: white; border: none; margin-top: 50px;">Continue</button></a>
+    </div>
+    <div class="feature-card4">
+      <h3 class="chatsup">Related Video Courses</h3>
+      <p>Related Video tutorial in field of your interests will be provided here, free resources will be provided</p>
+      <a href="VideoResources.html"><button class="contbutton" style="padding: 10px; background-color: rgb(245, 123, 52); border-radius: 5px; color: white; border: none; margin-top: 50px;">Continue</button></a>
+    </div>
+    <div class="feature-card5">
+        <div class="chat-container">
+            <div class="chat-header">PrepZo ChatBot</div>
+            <div class="chat-messages" id="chatMessages">
+              <div class="message bot">Hi there! How can I help you plan your career?</div>
+              <div class="message user">I'm interested in AI and need some guidance.</div>
+            </div>
+            <div class="chat-input-area">
+              <input type="text" id="chatInput" placeholder="Type your message..." />
+              <button onclick="sendMessage()">Send</button>
+            </div>
+          </div>
+    </div>
+
+
+  </section>
+
+  <footer>
+    &copy; 2025 CareerNav. All rights reserved.
+  </footer>
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('chatInput');
+      const msg = input.value.trim();
+      if (msg) {
+        const chat = document.getElementById('chatMessages');
+        const userMsg = document.createElement('div');
+        userMsg.className = 'message user';
+        userMsg.innerText = msg;
+        chat.appendChild(userMsg);
+        input.value = '';
+        chat.scrollTop = chat.scrollHeight;
+      }
+    }
+  </script>
+</body>
+</html>

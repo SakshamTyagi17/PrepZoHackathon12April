@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Courses & Tutorials</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f0f8ff, #e1f5fe);
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #0d47a1;
+      margin-bottom: 15px;
+      animation: slideUp 1s ease-in-out;
+    }
+
+    p.subtitle {
+      font-size: 1.1rem;
+      color: #37474f;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+
+    .video-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .video-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s;
+      animation: fadeCard 1s ease forwards;
+    }
+
+    .video-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+
+    .card-content {
+      padding: 15px 20px;
+    }
+
+    .card-content h3 {
+      font-size: 1.2rem;
+      color: #0d47a1;
+      margin-bottom: 8px;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    @keyframes fadeCard {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .back-link {
+      margin-top: 40px;
+    }
+
+    .back-link a {
+      color: #1565c0;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .back-link a:hover {
+      color: #0d47a1;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Video Courses & Tutorials</h1>
+  <p class="subtitle">Watch handpicked tutorials to accelerate your learning journey.</p>
+
+  <div class="video-container">
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/kqtD5dpn9C8" allowfullscreen></iframe>
+      <div class="card-content">
+        <h3>Python for Beginners</h3>
+        <p>Learn Python basics in this beginner-friendly tutorial by Programming with Mosh.</p>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/UB1O30fR-EE" allowfullscreen></iframe>
+      <div class="card-content">
+        <h3>HTML & CSS Crash Course</h3>
+        <p>A complete crash course from Traversy Media to master frontend basics.</p>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/PkZNo7MFNFg" allowfullscreen></iframe>
+      <div class="card-content">
+        <h3>JavaScript Full Course</h3>
+        <p>freeCodeCamp brings you a complete beginner to pro JavaScript guide.</p>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/ukzFI9rgwfU" allowfullscreen></iframe>
+      <div class="card-content">
+        <h3>Machine Learning Tutorial</h3>
+        <p>Get started with Machine Learning using Python, taught by Tech With Tim.</p>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/aircAruvnKk" allowfullscreen></iframe>
+      <div class="card-content">
+        <h3>Neural Networks from Scratch</h3>
+        <p>Deep dive into neural networks and backpropagation, by 3Blue1Brown.</p>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/Z1Yd7upQsXY" allowfullscreen></iframe>
+      <div class="card-content">
+        <h3>React JS Full Course</h3>
+        <p>Master React in this free full course by freeCodeCamp.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="back-link">
+    <a href="index.html">← Back to Home</a>
+  </div>
+
+</body>
+</html>

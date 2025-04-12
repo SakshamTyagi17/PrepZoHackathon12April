@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Materials</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", sans-serif; }
+
+    body {
+      background: linear-gradient(135deg, #e3f2fd, #e0f7fa);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #1a237e;
+      margin-bottom: 10px;
+      animation: popIn 1s ease-out;
+    }
+
+    p.subtitle {
+      font-size: 1.1rem;
+      color: #37474f;
+      margin-bottom: 30px;
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .material-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s;
+      position: relative;
+      overflow: hidden;
+      animation: slideUp 1s ease forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      color: #1a237e;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .view-btn {
+      background-color: #4f46e5;
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 30px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .view-btn:hover {
+      background-color: #3f37c9;
+      transform: scale(1.05);
+    }
+
+    .back-home {
+      margin-top: 40px;
+    }
+
+    .back-home a {
+      color: #4f46e5;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .back-home a:hover {
+      color: #1a237e;
+      text-decoration: underline;
+    }
+
+    @keyframes slideUp {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Study Materials</h1>
+  <p class="subtitle">Explore curated learning content to strengthen your skills and career foundation.</p>
+
+  <div class="material-container">
+    <div class="card">
+      <h3>Python Basics PDF</h3>
+      <p>A beginner-friendly PDF covering syntax, loops, functions, and data types.</p>
+      <a href="resources/python_basics.pdf" target="_blank"><button class="view-btn">View PDF</button></a>
+    </div>
+
+    <div class="card">
+      <h3>HTML & CSS Guide</h3>
+      <p>Step-by-step guide with code snippets and hands-on mini projects.</p>
+      <a href="resources/html_css_guide.pdf" target="_blank"><button class="view-btn">View Guide</button></a>
+    </div>
+
+    <div class="card">
+      <h3>JavaScript Crash Course</h3>
+      <p>A short, interactive JS crash course with exercises and notes.</p>
+      <a href="resources/js_crash_course.pdf" target="_blank"><button class="view-btn">Start Now</button></a>
+    </div>
+
+    <div class="card">
+      <h3>AI & ML Roadmap</h3>
+      <p>Visual learning path and top resources to begin with AI & ML.</p>
+      <a href="resources/ai_ml_roadmap.pdf" target="_blank"><button class="view-btn">Explore</button></a>
+    </div>
+  </div>
+
+  <div class="back-home">
+    <a href="index.html">← Back to Home</a>
+  </div>
+
+</body>
+</html>
